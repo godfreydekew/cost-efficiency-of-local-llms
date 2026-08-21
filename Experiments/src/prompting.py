@@ -140,42 +140,41 @@ def classify_gpt(
     system_prompt = build_system_prompt(label_names, examples)
     user_message  = build_user_message(text)
     
-    response = client.chat.completions.create(
-        model=model,
-        messages=[
-            {'role': 'system',  'content': system_prompt},
-            {'role': 'user',    'content': user_message},
-        ],
-        max_tokens=3,
-        temperature=0.0,
-        top_p=1.0,
-    )
-
-    # response = client.responses.create(
+    # response = client.chat.completions.create(
     #     model=model,
-    #     input=[
+    #     messages=[
     #         {'role': 'system',  'content': system_prompt},
     #         {'role': 'user',    'content': user_message},
     #     ],
-    #     text={"verbosity":"low"},
-    #     reasoning={"effort": "low"}
+    #     max_tokens=3,
+    #     temperature=0.0,
+    #     top_p=1.0,
     # )
-    
-    raw_output = response.choices[0].message.content.strip()
-    input_tokens = response.usage.prompt_tokens
-    output_tokens = response.usage.completion_tokens
-    total_tokens = response.usage.total_tokens
 
-    # raw_output = response.output_text.strip()
-    # input_tokens = response.usage.input_tokens
-    # output_tokens = response.usage.output_tokens
+    response = client.responses.create(
+        model=model,
+        input=[
+            {'role': 'system',  'content': system_prompt},
+            {'role': 'user',    'content': user_message},
+        ],
+        text={"verbosity":"low"},
+        reasoning={"effort": "low"}
+    )
+
+    # raw_output = response.choices[0].message.content.strip()
+    # input_tokens = response.usage.prompt_tokens
+    # output_tokens = response.usage.completion_tokens
     # total_tokens = response.usage.total_tokens
+
+    raw_output = response.output_text.strip()
+    input_tokens = response.usage.input_tokens
+    output_tokens = response.usage.output_tokens
+    total_tokens = response.usage.total_tokens
     
     # Cost calculation: $0.25 per 1M input tokens, $2.00 per 1M output tokens
-    cost_usd = (input_tokens * (2.50 / 1_000_000)) + (output_tokens * (10.00 / 1_000_000))
+    cost_usd = (input_tokens * (0.20 / 1_000_000)) + (output_tokens * (1.20 / 1_000_000))
     
     return raw_output, input_tokens, output_tokens, total_tokens, cost_usd
-
 
 def classify_llama(
     text: str, 
