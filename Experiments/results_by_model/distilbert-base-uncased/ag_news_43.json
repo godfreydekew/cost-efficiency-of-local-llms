@@ -1,0 +1,84 @@
+{
+  "experiment": {
+    "model": "distilbert-base-uncased",
+    "dataset": "ag_news",
+    "num_labels": 4,
+    "epochs": 3,
+    "batch_size": 16,
+    "max_seq_len": 64,
+    "learning_rate": 2e-05,
+    "seed": 43,
+    "device": "cuda",
+    "gpu_name": "NVIDIA GB10"
+  },
+  "training": {
+    "total_train_time_s": 616.26,
+    "vram_after_model_load_mb": 256.5,
+    "per_epoch": [
+      {
+        "epoch": 1,
+        "epoch_time_s": 212.12,
+        "peak_vram_mb": 1110.1,
+        "eval_accuracy": 0.9405,
+        "eval_macro_f1": 0.9405,
+        "n_samples": 42,
+        "avg_power_w": 34.8,
+        "peak_power_w": 46.1,
+        "energy_wh": 2.0528
+      },
+      {
+        "epoch": 2,
+        "epoch_time_s": 196.94,
+        "peak_vram_mb": 1110.1,
+        "eval_accuracy": 0.9449,
+        "eval_macro_f1": 0.9449,
+        "n_samples": 39,
+        "avg_power_w": 36.0,
+        "peak_power_w": 36.9,
+        "energy_wh": 1.9681
+      },
+      {
+        "epoch": 3,
+        "epoch_time_s": 207.07,
+        "peak_vram_mb": 1110.1,
+        "eval_accuracy": 0.9451,
+        "eval_macro_f1": 0.9451,
+        "n_samples": 41,
+        "avg_power_w": 36.0,
+        "peak_power_w": 46.1,
+        "energy_wh": 2.0725
+      }
+    ],
+    "epochs_to_convergence": 3
+  },
+  "inference": {
+    "total_samples": 7600,
+    "inference_time_total_s": 2.16,
+    "samples_per_sec": 3512.3,
+    "ms_per_sample": 0.285,
+    "avg_power_w": 36.9,
+    "peak_power_w": 45.3,
+    "energy_wh": 0.0222,
+    "energy_wh_per_1k_queries": 0.002921,
+    "energy_mj_per_sample": 10.516,
+    "peak_vram_mb": 906.5,
+    "accuracy": 0.9445,
+    "macro_f1": 0.9445,
+    "per_class_f1": {
+      "World": 0.9557,
+      "Sports": 0.9853,
+      "Business": 0.9147,
+      "Sci/Tech": 0.9222
+    }
+  },
+  "test_results": {
+    "final_accuracy": 0.9445,
+    "final_macro_f1": 0.9445,
+    "per_class_f1": {
+      "World": 0.9557,
+      "Sports": 0.9853,
+      "Business": 0.9147,
+      "Sci/Tech": 0.9222
+    }
+  }
+}

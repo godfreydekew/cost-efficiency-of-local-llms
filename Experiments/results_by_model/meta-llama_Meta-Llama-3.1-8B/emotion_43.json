@@ -1,0 +1,96 @@
+{
+  "experiment": {
+    "model": "meta-llama/Meta-Llama-3.1-8B",
+    "method": "QLoRA",
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "dataset": "emotion",
+    "num_labels": 6,
+    "epochs": 3,
+    "batch_size": 4,
+    "grad_accum": 4,
+    "effective_batch": 16,
+    "max_seq_len": 64,
+    "learning_rate": 0.0002,
+    "seed": 43,
+    "device": "cuda",
+    "gpu_name": "NVIDIA GB10",
+    "trainable_params": 41967616,
+    "total_params": 4057255936,
+    "pct_trainable": 1.0344
+  },
+  "training": {
+    "total_train_time_s": 9776.63,
+    "vram_after_model_load_mb": 6445.1,
+    "per_epoch": [
+      {
+        "epoch": 1,
+        "epoch_time_s": 3262.14,
+        "peak_vram_mb": 6172.0,
+        "eval_accuracy": 0.9324,
+        "eval_macro_f1": 0.9053,
+        "n_samples": 645,
+        "avg_power_w": 57.3,
+        "peak_power_w": 60.6,
+        "energy_wh": 51.9016
+      },
+      {
+        "epoch": 2,
+        "epoch_time_s": 3257.29,
+        "peak_vram_mb": 6172.0,
+        "eval_accuracy": 0.9469,
+        "eval_macro_f1": 0.9213,
+        "n_samples": 644,
+        "avg_power_w": 57.2,
+        "peak_power_w": 60.8,
+        "energy_wh": 51.7294
+      },
+      {
+        "epoch": 3,
+        "epoch_time_s": 3256.93,
+        "peak_vram_mb": 6172.0,
+        "eval_accuracy": 0.951,
+        "eval_macro_f1": 0.9281,
+        "n_samples": 644,
+        "avg_power_w": 56.9,
+        "peak_power_w": 59.8,
+        "energy_wh": 51.4986
+      }
+    ],
+    "epochs_to_convergence": 3
+  },
+  "inference": {
+    "total_samples": 2000,
+    "inference_time_total_s": 122.56,
+    "samples_per_sec": 16.3,
+    "ms_per_sample": 61.281,
+    "avg_power_w": 59.3,
+    "peak_power_w": 60.0,
+    "energy_wh": 2.02,
+    "energy_wh_per_1k_queries": 1.01,
+    "energy_mj_per_sample": 3636.0,
+    "peak_vram_mb": 5891.9,
+    "accuracy": 0.933,
+    "macro_f1": 0.8894,
+    "per_class_f1": {
+      "sadness": 0.9673,
+      "joy": 0.9537,
+      "love": 0.8511,
+      "anger": 0.9305,
+      "fear": 0.898,
+      "surprise": 0.736
+    }
+  },
+  "test_results": {
+    "final_accuracy": 0.933,
+    "final_macro_f1": 0.8894,
+    "per_class_f1": {
+      "sadness": 0.9673,
+      "joy": 0.9537,
+      "love": 0.8511,
+      "anger": 0.9305,
+      "fear": 0.898,
+      "surprise": 0.736
+    }
+  }
+}

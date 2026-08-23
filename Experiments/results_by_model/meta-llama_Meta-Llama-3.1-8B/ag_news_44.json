@@ -1,0 +1,92 @@
+{
+  "experiment": {
+    "model": "meta-llama/Meta-Llama-3.1-8B",
+    "method": "QLoRA",
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "dataset": "ag_news",
+    "num_labels": 4,
+    "epochs": 3,
+    "batch_size": 4,
+    "grad_accum": 4,
+    "effective_batch": 16,
+    "max_seq_len": 64,
+    "learning_rate": 0.0002,
+    "seed": 44,
+    "device": "cuda",
+    "gpu_name": "NVIDIA GB10",
+    "trainable_params": 41959424,
+    "total_params": 4057239552,
+    "pct_trainable": 1.0342
+  },
+  "training": {
+    "total_train_time_s": 65588.92,
+    "vram_after_model_load_mb": 6445.1,
+    "per_epoch": [
+      {
+        "epoch": 1,
+        "epoch_time_s": 21858.27,
+        "peak_vram_mb": 6171.9,
+        "eval_accuracy": 0.9332,
+        "eval_macro_f1": 0.933,
+        "n_samples": 4325,
+        "avg_power_w": 61.5,
+        "peak_power_w": 66.5,
+        "energy_wh": 373.3711
+      },
+      {
+        "epoch": 2,
+        "epoch_time_s": 21880.08,
+        "peak_vram_mb": 6171.9,
+        "eval_accuracy": 0.9492,
+        "eval_macro_f1": 0.9492,
+        "n_samples": 4329,
+        "avg_power_w": 63.1,
+        "peak_power_w": 66.5,
+        "energy_wh": 383.4177
+      },
+      {
+        "epoch": 3,
+        "epoch_time_s": 21850.34,
+        "peak_vram_mb": 6171.9,
+        "eval_accuracy": 0.9562,
+        "eval_macro_f1": 0.9562,
+        "n_samples": 4323,
+        "avg_power_w": 61.6,
+        "peak_power_w": 65.0,
+        "energy_wh": 373.9011
+      }
+    ],
+    "epochs_to_convergence": 3
+  },
+  "inference": {
+    "total_samples": 7600,
+    "inference_time_total_s": 458.61,
+    "samples_per_sec": 16.6,
+    "ms_per_sample": 60.344,
+    "avg_power_w": 63.6,
+    "peak_power_w": 64.3,
+    "energy_wh": 8.1064,
+    "energy_wh_per_1k_queries": 1.066632,
+    "energy_mj_per_sample": 3839.874,
+    "peak_vram_mb": 5892.0,
+    "accuracy": 0.9513,
+    "macro_f1": 0.9513,
+    "per_class_f1": {
+      "World": 0.9604,
+      "Sports": 0.9874,
+      "Business": 0.9251,
+      "Sci/Tech": 0.9321
+    }
+  },
+  "test_results": {
+    "final_accuracy": 0.9513,
+    "final_macro_f1": 0.9513,
+    "per_class_f1": {
+      "World": 0.9604,
+      "Sports": 0.9874,
+      "Business": 0.9251,
+      "Sci/Tech": 0.9321
+    }
+  }
+}

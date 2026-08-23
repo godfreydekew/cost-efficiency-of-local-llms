@@ -1,0 +1,84 @@
+{
+  "experiment": {
+    "model": "distilbert-base-uncased",
+    "dataset": "ag_news",
+    "num_labels": 4,
+    "epochs": 3,
+    "batch_size": 16,
+    "max_seq_len": 64,
+    "learning_rate": 2e-05,
+    "seed": 42,
+    "device": "cuda",
+    "gpu_name": "NVIDIA GB10"
+  },
+  "training": {
+    "total_train_time_s": 641.45,
+    "vram_after_model_load_mb": 256.5,
+    "per_epoch": [
+      {
+        "epoch": 1,
+        "epoch_time_s": 202.05,
+        "peak_vram_mb": 1110.1,
+        "eval_accuracy": 0.9335,
+        "eval_macro_f1": 0.9334,
+        "n_samples": 40,
+        "avg_power_w": 35.7,
+        "peak_power_w": 46.3,
+        "energy_wh": 2.0062
+      },
+      {
+        "epoch": 2,
+        "epoch_time_s": 227.14,
+        "peak_vram_mb": 1110.1,
+        "eval_accuracy": 0.9456,
+        "eval_macro_f1": 0.9456,
+        "n_samples": 45,
+        "avg_power_w": 34.2,
+        "peak_power_w": 47.8,
+        "energy_wh": 2.16
+      },
+      {
+        "epoch": 3,
+        "epoch_time_s": 212.13,
+        "peak_vram_mb": 1110.1,
+        "eval_accuracy": 0.9461,
+        "eval_macro_f1": 0.9461,
+        "n_samples": 42,
+        "avg_power_w": 34.0,
+        "peak_power_w": 36.5,
+        "energy_wh": 2.0058
+      }
+    ],
+    "epochs_to_convergence": 3
+  },
+  "inference": {
+    "total_samples": 7600,
+    "inference_time_total_s": 2.15,
+    "samples_per_sec": 3528.6,
+    "ms_per_sample": 0.283,
+    "avg_power_w": 42.8,
+    "peak_power_w": 45.6,
+    "energy_wh": 0.0256,
+    "energy_wh_per_1k_queries": 0.003368,
+    "energy_mj_per_sample": 12.126,
+    "peak_vram_mb": 906.5,
+    "accuracy": 0.9441,
+    "macro_f1": 0.9441,
+    "per_class_f1": {
+      "World": 0.9551,
+      "Sports": 0.9866,
+      "Business": 0.9134,
+      "Sci/Tech": 0.9212
+    }
+  },
+  "test_results": {
+    "final_accuracy": 0.9441,
+    "final_macro_f1": 0.9441,
+    "per_class_f1": {
+      "World": 0.9551,
+      "Sports": 0.9866,
+      "Business": 0.9134,
+      "Sci/Tech": 0.9212
+    }
+  }
+}

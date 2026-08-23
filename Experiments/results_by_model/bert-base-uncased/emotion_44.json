@@ -1,0 +1,88 @@
+{
+  "experiment": {
+    "model": "bert-base-uncased",
+    "dataset": "emotion",
+    "num_labels": 6,
+    "epochs": 3,
+    "batch_size": 16,
+    "max_seq_len": 64,
+    "learning_rate": 2e-05,
+    "seed": 44,
+    "device": "cuda",
+    "gpu_name": "NVIDIA GB10"
+  },
+  "training": {
+    "total_train_time_s": 181.7,
+    "vram_after_model_load_mb": 1721.2,
+    "per_epoch": [
+      {
+        "epoch": 1,
+        "epoch_time_s": 60.51,
+        "peak_vram_mb": 1903.4,
+        "eval_accuracy": 0.9375,
+        "eval_macro_f1": 0.9143,
+        "n_samples": 12,
+        "avg_power_w": 30.3,
+        "peak_power_w": 32.5,
+        "energy_wh": 0.5087
+      },
+      {
+        "epoch": 2,
+        "epoch_time_s": 60.52,
+        "peak_vram_mb": 1902.6,
+        "eval_accuracy": 0.938,
+        "eval_macro_f1": 0.9152,
+        "n_samples": 12,
+        "avg_power_w": 31.0,
+        "peak_power_w": 33.4,
+        "energy_wh": 0.522
+      },
+      {
+        "epoch": 3,
+        "epoch_time_s": 60.53,
+        "peak_vram_mb": 1902.6,
+        "eval_accuracy": 0.939,
+        "eval_macro_f1": 0.9153,
+        "n_samples": 12,
+        "avg_power_w": 31.3,
+        "peak_power_w": 33.0,
+        "energy_wh": 0.5271
+      }
+    ],
+    "epochs_to_convergence": 3
+  },
+  "inference": {
+    "total_samples": 40000,
+    "inference_time_total_s": 20.73,
+    "samples_per_sec": 1929.5,
+    "ms_per_sample": 0.518,
+    "avg_power_w": 46.4,
+    "peak_power_w": 47.9,
+    "energy_wh": 0.2674,
+    "energy_wh_per_1k_queries": 0.006685,
+    "energy_mj_per_sample": 24.066,
+    "peak_vram_mb": 1505.0,
+    "accuracy": 0.9245,
+    "macro_f1": 0.8765,
+    "per_class_f1": {
+      "sadness": 0.9657,
+      "joy": 0.9458,
+      "love": 0.8221,
+      "anger": 0.9171,
+      "fear": 0.8913,
+      "surprise": 0.7167
+    }
+  },
+  "test_results": {
+    "final_accuracy": 0.9245,
+    "final_macro_f1": 0.8765,
+    "per_class_f1": {
+      "sadness": 0.9657,
+      "joy": 0.9458,
+      "love": 0.8221,
+      "anger": 0.9171,
+      "fear": 0.8913,
+      "surprise": 0.7167
+    }
+  }
+}

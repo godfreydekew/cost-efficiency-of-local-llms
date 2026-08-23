@@ -1,0 +1,84 @@
+{
+  "experiment": {
+    "model": "bert-base-uncased",
+    "dataset": "ag_news",
+    "num_labels": 4,
+    "epochs": 3,
+    "batch_size": 16,
+    "max_seq_len": 64,
+    "learning_rate": 2e-05,
+    "seed": 42,
+    "device": "cuda",
+    "gpu_name": "NVIDIA GB10"
+  },
+  "training": {
+    "total_train_time_s": 1130.79,
+    "vram_after_model_load_mb": 1712.1,
+    "per_epoch": [
+      {
+        "epoch": 1,
+        "epoch_time_s": 363.44,
+        "peak_vram_mb": 1903.6,
+        "eval_accuracy": 0.9342,
+        "eval_macro_f1": 0.9341,
+        "n_samples": 72,
+        "avg_power_w": 35.2,
+        "peak_power_w": 48.0,
+        "energy_wh": 3.5584
+      },
+      {
+        "epoch": 2,
+        "epoch_time_s": 378.63,
+        "peak_vram_mb": 1903.6,
+        "eval_accuracy": 0.9482,
+        "eval_macro_f1": 0.9482,
+        "n_samples": 75,
+        "avg_power_w": 34.6,
+        "peak_power_w": 47.6,
+        "energy_wh": 3.6436
+      },
+      {
+        "epoch": 3,
+        "epoch_time_s": 388.58,
+        "peak_vram_mb": 1903.6,
+        "eval_accuracy": 0.9476,
+        "eval_macro_f1": 0.9477,
+        "n_samples": 77,
+        "avg_power_w": 34.4,
+        "peak_power_w": 47.7,
+        "energy_wh": 3.7159
+      }
+    ],
+    "epochs_to_convergence": 2
+  },
+  "inference": {
+    "total_samples": 7600,
+    "inference_time_total_s": 3.96,
+    "samples_per_sec": 1920.4,
+    "ms_per_sample": 0.521,
+    "avg_power_w": 42.0,
+    "peak_power_w": 47.3,
+    "energy_wh": 0.0461,
+    "energy_wh_per_1k_queries": 0.006066,
+    "energy_mj_per_sample": 21.837,
+    "peak_vram_mb": 1497.3,
+    "accuracy": 0.9459,
+    "macro_f1": 0.9459,
+    "per_class_f1": {
+      "World": 0.9572,
+      "Sports": 0.9869,
+      "Business": 0.9182,
+      "Sci/Tech": 0.9214
+    }
+  },
+  "test_results": {
+    "final_accuracy": 0.9459,
+    "final_macro_f1": 0.9459,
+    "per_class_f1": {
+      "World": 0.9572,
+      "Sports": 0.9869,
+      "Business": 0.9182,
+      "Sci/Tech": 0.9214
+    }
+  }
+}

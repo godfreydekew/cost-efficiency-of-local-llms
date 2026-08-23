@@ -1,0 +1,116 @@
+{
+  "experiment": {
+    "model": "roberta-base",
+    "dataset": "20_newsgroups",
+    "num_labels": 20,
+    "epochs": 3,
+    "batch_size": 16,
+    "max_seq_len": 512,
+    "learning_rate": 2e-05,
+    "seed": 42,
+    "device": "cuda",
+    "gpu_name": "NVIDIA GB10"
+  },
+  "training": {
+    "total_train_time_s": 424.61,
+    "vram_after_model_load_mb": 476.8,
+    "per_epoch": [
+      {
+        "epoch": 1,
+        "epoch_time_s": 141.5,
+        "peak_vram_mb": 4929.4,
+        "eval_accuracy": 0.7332,
+        "eval_macro_f1": 0.7065,
+        "n_samples": 28,
+        "avg_power_w": 45.4,
+        "peak_power_w": 49.2,
+        "energy_wh": 1.7845
+      },
+      {
+        "epoch": 2,
+        "epoch_time_s": 141.49,
+        "peak_vram_mb": 4929.4,
+        "eval_accuracy": 0.7432,
+        "eval_macro_f1": 0.7213,
+        "n_samples": 28,
+        "avg_power_w": 48.5,
+        "peak_power_w": 51.3,
+        "energy_wh": 1.9063
+      },
+      {
+        "epoch": 3,
+        "epoch_time_s": 141.49,
+        "peak_vram_mb": 4929.4,
+        "eval_accuracy": 0.7596,
+        "eval_macro_f1": 0.7413,
+        "n_samples": 28,
+        "avg_power_w": 51.1,
+        "peak_power_w": 54.3,
+        "energy_wh": 2.0103
+      }
+    ],
+    "epochs_to_convergence": 3
+  },
+  "inference": {
+    "total_samples": 7296,
+    "inference_time_total_s": 24.86,
+    "samples_per_sec": 293.4,
+    "ms_per_sample": 3.408,
+    "avg_power_w": 59.8,
+    "peak_power_w": 61.6,
+    "energy_wh": 0.4132,
+    "energy_wh_per_1k_queries": 0.056634,
+    "energy_mj_per_sample": 203.882,
+    "peak_vram_mb": 1843.4,
+    "accuracy": 0.7336,
+    "macro_f1": 0.7135,
+    "per_class_f1": {
+      "alt.atheism": 0.5043,
+      "comp.graphics": 0.6912,
+      "comp.os.ms-windows.misc": 0.6675,
+      "comp.sys.ibm.pc.hardware": 0.6519,
+      "comp.sys.mac.hardware": 0.6974,
+      "comp.windows.x": 0.797,
+      "misc.forsale": 0.8797,
+      "rec.autos": 0.8141,
+      "rec.motorcycles": 0.7776,
+      "rec.sport.baseball": 0.8945,
+      "rec.sport.hockey": 0.9163,
+      "sci.crypt": 0.7628,
+      "sci.electronics": 0.6398,
+      "sci.med": 0.8534,
+      "sci.space": 0.7894,
+      "soc.religion.christian": 0.7698,
+      "talk.politics.guns": 0.632,
+      "talk.politics.mideast": 0.8221,
+      "talk.politics.misc": 0.5331,
+      "talk.religion.misc": 0.1761
+    }
+  },
+  "test_results": {
+    "final_accuracy": 0.7336,
+    "final_macro_f1": 0.7135,
+    "per_class_f1": {
+      "alt.atheism": 0.5043,
+      "comp.graphics": 0.6912,
+      "comp.os.ms-windows.misc": 0.6675,
+      "comp.sys.ibm.pc.hardware": 0.6519,
+      "comp.sys.mac.hardware": 0.6974,
+      "comp.windows.x": 0.797,
+      "misc.forsale": 0.8797,
+      "rec.autos": 0.8141,
+      "rec.motorcycles": 0.7776,
+      "rec.sport.baseball": 0.8945,
+      "rec.sport.hockey": 0.9163,
+      "sci.crypt": 0.7628,
+      "sci.electronics": 0.6398,
+      "sci.med": 0.8534,
+      "sci.space": 0.7894,
+      "soc.religion.christian": 0.7698,
+      "talk.politics.guns": 0.632,
+      "talk.politics.mideast": 0.8221,
+      "talk.politics.misc": 0.5331,
+      "talk.religion.misc": 0.1761
+    }
+  }
+}

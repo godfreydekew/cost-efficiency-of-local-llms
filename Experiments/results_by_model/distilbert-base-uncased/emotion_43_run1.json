@@ -1,0 +1,72 @@
+{
+  "experiment": {
+    "model": "distilbert-base-uncased",
+    "dataset": "dair-ai/emotion",
+    "num_labels": 6,
+    "epochs": 3,
+    "batch_size": 16,
+    "max_seq_len": 64,
+    "learning_rate": 2e-05,
+    "seed": 43,
+    "device": "cuda",
+    "gpu_name": "NVIDIA GB10"
+  },
+  "training": {
+    "total_train_time_s": 96.01,
+    "vram_after_model_load_mb": 0.0,
+    "per_epoch": [
+      {
+        "epoch": 1,
+        "epoch_time_s": 30.28,
+        "peak_vram_mb": 1110.1,
+        "eval_accuracy": 0.928,
+        "eval_macro_f1": 0.8997,
+        "n_samples": 6,
+        "avg_power_w": 27.9,
+        "peak_power_w": 31.4,
+        "energy_wh": 0.2349
+      },
+      {
+        "epoch": 2,
+        "epoch_time_s": 30.3,
+        "peak_vram_mb": 1110.1,
+        "eval_accuracy": 0.939,
+        "eval_macro_f1": 0.9131,
+        "n_samples": 6,
+        "avg_power_w": 30.1,
+        "peak_power_w": 32.0,
+        "energy_wh": 0.2529
+      },
+      {
+        "epoch": 3,
+        "epoch_time_s": 35.32,
+        "peak_vram_mb": 1110.1,
+        "eval_accuracy": 0.9365,
+        "eval_macro_f1": 0.9109,
+        "n_samples": 7,
+        "avg_power_w": 29.0,
+        "peak_power_w": 30.6,
+        "energy_wh": 0.2845
+      }
+    ],
+    "epochs_to_convergence": 2
+  },
+  "inference": {
+    "inference_time_total_s": 0.57,
+    "inference_ms_per_sample": 0.286,
+    "samples_per_sec": 3494.8,
+    "peak_vram_inference_mb": 906.4
+  },
+  "test_results": {
+    "final_accuracy": 0.926,
+    "final_macro_f1": 0.8806,
+    "per_class_f1": {
+      "sadness": 0.9665,
+      "joy": 0.9468,
+      "love": 0.8235,
+      "anger": 0.9242,
+      "fear": 0.8924,
+      "surprise": 0.7302
+    }
+  }
+}
